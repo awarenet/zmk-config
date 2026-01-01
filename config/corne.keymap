@@ -4,6 +4,12 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+     kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+    };
+    
     combos {
         compatible = "zmk,combos";
 
@@ -77,9 +83,9 @@
 
         nav {
             bindings = <
-&trans  &kp HOME  &kp UP    &kp END    &kp PG_UP  &trans    &sys_reset        &studio_unlock  &trans  &trans  &trans  &trans
-&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &trans    &soft_off         &trans          &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &ext_power EP_ON  &trans          &trans  &trans  &trans  &trans
+&trans  &kp HOME  &kp UP    &kp END    &kp PG_UP  &trans    &sys_reset        &studio_unlock  &trans  &trans  &trans  &ext_power EP_TOG
+&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &trans    &soft_off         &trans          &trans  &trans  &trans  &ext_power EP_OFF
+&trans  &trans    &trans    &trans     &trans     &trans    &ext_power EP_ON  &trans          &trans  &trans  &trans  &ext_power EP_ON
                             &trans     &trans     &trans    &trans            &trans          &trans
             >;
         };
