@@ -74,10 +74,10 @@
 
         num-sym {
             bindings = <
-&trans  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &trans    &kp GRAVE  &kp LS(LPAR)   &kp LS(RPAR)   &kp LS(UNDER)  &kp LS(PLUS)  &trans
-&trans  &kp N5  &kp N6  &kp N7     &kp N8     &trans    &trans     &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)   &kp LS(STAR)  &trans
-&trans  &kp N1  &kp N2  &kp N3     &kp N4     &trans    &trans     &kp LS(EXCL)   &kp LS(AT)     &kp LS(POUND)  &kp LS(DLLR)  &trans
-                        &trans     &trans     &trans    &trans     &trans         &trans
+&trans  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &trans    &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &kp PLUS    &trans
+&trans  &kp N5  &kp N6  &kp N7     &kp N8     &trans    &trans     &kp PERCENT           &kp CARET              &kp AMPS        &kp ASTRK   &trans
+&trans  &kp N1  &kp N2  &kp N3     &kp N4     &trans    &trans     &kp EXCL              &kp AT                 &kp HASH        &kp DOLLAR  &trans
+                        &trans     &trans     &trans    &trans     &trans                &trans
             >;
         };
 
