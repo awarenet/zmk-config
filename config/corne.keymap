@@ -4,12 +4,12 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-     kscan: kscan {
+    kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         wakeup-source;
     };
-    
+
     combos {
         compatible = "zmk,combos";
 
@@ -65,28 +65,37 @@
 
         base {
             bindings = <
-&kp ESC               &kp Q  &kp W  &kp F         &kp P  &kp B              &kp J                      &kp L  &kp U                &kp Y    &kp SEMI  &kp DEL
-&kp TAB               &kp A  &kp R  &kp S         &kp T  &kp G              &kp M                      &kp N  &kp E                &kp I    &kp O     &kp APOS
-&mt LEFT_SHIFT ENTER  &kp Z  &kp X  &kp C         &kp V  &kp D              &kp K                      &kp H  &kp COMMA            &kp DOT  &kp FSLH  &kp BSLH
-                                    &kp LEFT_GUI  &mo 2  &mt LCTRL SPACE    &mt RIGHT_SHIFT BACKSPACE  &mo 1  &mt RIGHT_ALT ENTER
+&kp ESC     &kp Q  &kp W  &kp F   &kp P           &kp B              &kp J                      &kp L        &kp U                &kp Y    &kp SEMI  &kp DEL
+&kp TAB     &kp A  &kp R  &kp S   &kp T           &kp G              &kp M                      &kp N        &kp E                &kp I    &kp O     &kp APOS
+&caps_word  &kp Z  &kp X  &kp C   &kp V           &kp D              &kp K                      &kp H        &kp COMMA            &kp DOT  &kp FSLH  &kp BSLH
+                          &tog 2  &lt 3 LEFT_WIN  &mt LCTRL SPACE    &mt RIGHT_SHIFT BACKSPACE  &lt 1 ENTER  &mt RIGHT_ALT ENTER
             >;
         };
 
-        num-fn {
+        num-sym {
             bindings = <
-&trans  &kp N7  &kp N8  &kp N9  &kp N0     &trans    &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans
-&trans  &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans    &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp MINUS  &trans    &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans
-                        &trans  &trans     &trans    &trans  &trans  &trans
+&trans  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &trans    &kp GRAVE  &kp LS(LPAR)   &kp LS(RPAR)   &kp LS(UNDER)  &kp LS(PLUS)  &trans
+&trans  &kp N5  &kp N6  &kp N7     &kp N8     &trans    &trans     &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)   &kp LS(STAR)  &trans
+&trans  &kp N1  &kp N2  &kp N3     &kp N4     &trans    &trans     &kp LS(EXCL)   &kp LS(AT)     &kp LS(POUND)  &kp LS(DLLR)  &trans
+                        &trans     &trans     &trans    &trans     &trans         &trans
             >;
         };
 
         nav {
             bindings = <
-&trans  &kp HOME  &kp UP    &kp END    &kp PG_UP  &trans    &sys_reset        &studio_unlock  &trans  &trans  &trans  &ext_power EP_TOG
-&trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &trans    &soft_off         &trans          &trans  &trans  &trans  &ext_power EP_OFF
-&trans  &trans    &trans    &trans     &trans     &trans    &ext_power EP_ON  &trans          &trans  &trans  &trans  &ext_power EP_ON
-                            &trans     &trans     &trans    &trans            &trans          &trans
+&trans  &trans  &kp HOME        &kp UP_ARROW    &kp END    &kp PG_UP        &sys_reset        &studio_unlock  &trans  &trans  &trans  &ext_power EP_TOG
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN    &soft_off         &trans          &trans  &trans  &trans  &ext_power EP_OFF
+&trans  &trans  &trans          &trans          &trans     &trans           &ext_power EP_ON  &trans          &trans  &trans  &trans  &ext_power EP_ON
+                                &trans          &trans     &trans           &trans            &trans          &trans
+            >;
+        };
+
+        fn {
+            bindings = <
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans   &trans   &trans    &trans  &trans  &trans
             >;
         };
     };
