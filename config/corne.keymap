@@ -69,6 +69,20 @@
             bindings = <&mo 2 &rgb_ug RGB_COLOR_HSB(230,100,43)>;
             label = "LOWER";
         };
+
+        screenshot: screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_WIN>;
+
+            label = "SCREENSHOT";
+        };
     };
 
     keymap {
@@ -103,10 +117,10 @@
 
         fn-nav {
             bindings = <
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp HOME        &kp UP_ARROW    &kp END          &kp PG_UP      &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &trans
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &trans  &trans          &trans          &trans           &trans         &trans
-                         &trans   &trans   &trans    &trans  &trans          &trans
+&screenshot  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp HOME        &kp UP_ARROW    &kp END          &kp PG_UP      &trans
+&trans       &kp F5  &kp F6   &kp F7   &kp F8   &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &trans
+&trans       &kp F1  &kp F2   &kp F3   &kp F4   &trans    &trans  &trans          &trans          &trans           &trans         &trans
+                              &trans   &trans   &trans    &trans  &trans          &trans
             >;
         };
     };
