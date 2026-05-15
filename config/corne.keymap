@@ -83,6 +83,18 @@
 
             label = "SCREENSHOT";
         };
+
+        superShorts: tilingUp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_WIN &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LEFT_WIN>;
+
+            label = "TILINGUP";
+        };
     };
 
     keymap {
@@ -108,10 +120,10 @@
 
         board-control {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &sys_reset  &studio_unlock  &trans  &trans  &trans  &ext_power EP_TOG
-&trans  &trans  &trans  &trans  &trans  &trans    &soft_off   &trans          &trans  &trans  &trans  &ext_power EP_OFF
-&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_NXT  &trans          &trans  &trans  &trans  &ext_power EP_ON
-                        &trans  &trans  &trans    &trans      &trans          &trans
+&trans  &trans  &trans                   &superShorts UP_ARROW  &trans                    &superShorts S    &sys_reset  &trans  &trans  &trans  &trans  &ext_power EP_TOG
+&trans  &trans  &superShorts LEFT_ARROW  &superShorts DOWN      &superShorts RIGHT_ARROW  &superShorts G    &soft_off   &trans  &trans  &trans  &trans  &ext_power EP_OFF
+&trans  &trans  &trans                   &trans                 &trans                    &trans            &bt BT_NXT  &trans  &trans  &trans  &trans  &ext_power EP_ON
+                                         &trans                 &trans                    &trans            &trans      &trans  &trans
             >;
         };
 
