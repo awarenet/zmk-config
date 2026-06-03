@@ -122,7 +122,7 @@
             bindings = <
 &trans  &trans  &trans                   &superShorts UP_ARROW  &superShorts M            &superShorts S    &sys_reset  &trans  &trans  &trans  &trans  &ext_power EP_TOG
 &trans  &trans  &superShorts LEFT_ARROW  &superShorts DOWN      &superShorts RIGHT_ARROW  &superShorts G    &soft_off   &trans  &trans  &trans  &trans  &ext_power EP_OFF
-&trans  &trans  &trans                   &trans                 &trans                    &superShorts Y    &bt BT_NXT  &trans  &trans  &trans  &trans  &ext_power EP_ON
+&tog 4  &trans  &trans                   &trans                 &trans                    &superShorts Y    &bt BT_NXT  &trans  &trans  &trans  &trans  &ext_power EP_ON
                                          &trans                 &trans                    &trans            &trans      &trans  &trans
             >;
         };
@@ -133,6 +133,15 @@
 &trans       &kp F5  &kp F6   &kp F7   &kp F8   &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN  &trans
 &trans       &kp F1  &kp F2   &kp F3   &kp F4   &trans    &trans  &trans          &trans          &trans           &trans         &trans
                               &trans   &trans   &trans    &trans  &trans          &trans
+            >;
+        };
+
+        Gaming {
+            bindings = <
+&kp ESC    &kp N1   &kp N2  &kp N3  &kp N4  &kp N5       &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp TAB  &kp Q   &kp W   &kp E   &kp R        &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp T    &kp A   &kp S   &kp D   &kp F        &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &kp SPACE    &trans  &trans  &trans
             >;
         };
     };
